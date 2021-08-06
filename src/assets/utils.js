@@ -3,44 +3,54 @@ import { v4 as uuidv4 } from "uuid"
 export default function dashboardList() {
   return [
     {
-      name: "Total Watch Time",
-      author: "Bonnie Sanchez",
+      name: "Backorder Details",
+      author: "Alex",
       image:
-        "https://raw.githubusercontent.com/robcrock/embedded-side-nav/main/src/images/img-01.png",
+        "https://github.com/agilesquid/tableauportal/blob/4ac9cb15851efa21a6408bc83f188f63260db7b5/src/assets/BackorderDetails.png",
       url:
-        "https://10ax.online.tableau.com/t/developmentonlydev595736/views/DashboardList/kpi1",
+        "https://tableau.enlinx.com/views/BackorderDetails_15989935222450/Backorders?:origin=card_share_link&:embed=n",
       id: uuidv4(),
       active: true,
     },
     {
-      name: "Average Watch Time",
-      author: "Clarence Ward",
+      name: "Inventory Days On Hand",
+      author: "Alex",
       image:
-        "https://raw.githubusercontent.com/robcrock/embedded-side-nav/main/src/images/img-02.png",
+        "https://github.com/agilesquid/tableauportal/blob/4ac9cb15851efa21a6408bc83f188f63260db7b5/src/assets/inventoryDaysOnHand.png",
       url:
-        "https://10ax.online.tableau.com/t/developmentonlydev595736/views/DashboardList/kpi2",
+        "https://tableau.enlinx.com/views/InventoryDaysOnHand_15988964986080/InventoryDaysOnHand?:origin=card_share_link&:embed=n",
       id: uuidv4(),
       active: false,
     },
     {
-      name: "Total Video Views",
-      author: "Theresa Young",
+      name: "Open Order Summary",
+      author: "Alex",
       image:
-        "https://raw.githubusercontent.com/robcrock/embedded-side-nav/main/src/images/img-03.png",
+        "https://github.com/agilesquid/tableauportal/blob/4ac9cb15851efa21a6408bc83f188f63260db7b5/src/assets/openOrderSummary.png",
       url:
-        "https://10ax.online.tableau.com/t/developmentonlydev595736/views/DashboardList/kpi3",
+        "https://tableau.enlinx.com/views/OpenOrderSummary_15990688480440/OpenOrderSummary?:origin=card_share_link&:embed=n",
       id: uuidv4(),
       active: false,
     },
     {
-      name: "Total Unique Views",
-      author: "Virginia Martin",
+      name: "Order Forecast",
+      author: "Alex",
       image:
-        "https://raw.githubusercontent.com/robcrock/embedded-side-nav/main/src/images/img-04.png",
+        "https://github.com/agilesquid/tableauportal/blob/4ac9cb15851efa21a6408bc83f188f63260db7b5/src/assets/orderForecast.png",
       url:
-        "https://10ax.online.tableau.com/t/developmentonlydev595736/views/DashboardList/kpi4",
+        "https://tableau.enlinx.com/views/OrderForecast/OrderForecast?:origin=card_share_link&:embed=n",
       id: uuidv4(),
       active: false,
     },
+    {
+        name: "Shipping Volume (Day Over Day)",
+        author: "Alex",
+        image:
+          "https://github.com/agilesquid/tableauportal/blob/4ac9cb15851efa21a6408bc83f188f63260db7b5/src/assets/shippingVolume.png",
+        url:
+          "https://tableau.enlinx.com/views/ShippingVolumeDayOverDay_15988991620610/TotalOrderswithClientFilter?:origin=card_share_link&:embed=n",
+        id: uuidv4(),
+        active: false,
+      },
   ]
 }
