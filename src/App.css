@@ -1,0 +1,34 @@
+/* @import-normalize; */
+@import "./viz.css";
+
+*,
+*::before,
+*::after {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3 {
+  color: rgb(54, 54, 54);
+}
+
+body {
+  font-family: sans-serif;
+}
+
+h3,
+h4 {
+  font-weight: 400;
+  color: rgb(100, 100, 100);
+}
+
+.bars {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 20px;
+  cursor: pointer;
+}
