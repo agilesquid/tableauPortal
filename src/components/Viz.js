@@ -9,8 +9,8 @@ export default function Viz({ currentDashboard }) {
     const options = {
         hideTabs: true,
         hideToolbar: true,
-        width: "900px",
-        height: "540px",
+        width: "1500px",
+        height: "800px",
     }
 
     const initViz = () => {

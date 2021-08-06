@@ -1,0 +1,80 @@
+.list {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20rem;
+  height: 100%;
+  background-color: white;
+  box-shadow: 2px 2px 50px #b3b3b3ff;
+  overflow: scroll;
+  transform: translateX(-100%);
+  transition: all 0.5s ease;
+  /* This will bring the list to the top */
+  z-index: 9999;
+}
+
+.list .close {
+  cursor: pointer;
+}
+
+.list-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.list-item {
+  display: flex;
+  align-items: top;
+  padding: 0.75rem;
+  cursor: pointer;
+  height: 100px;
+}
+
+.list-item:hover {
+  background-color: #fafafaff;
+}
+
+.list-item img {
+  width: 50%;
+}
+
+.dashboard-description {
+  padding-left: 5rem;
+  text-transform: uppercase;
+}
+
+.dashboard-description h3 {
+  font-size: small;
+  font-weight: normal;
+  margin-bottom: 4px;
+}
+
+.dashboard-description h4 {
+  font-size: 13pt;
+}
+
+.selected {
+  background-color: #eeef;
+}
+
+.active-list {
+  transform: translateX(0%);
+  opacity: 1;
+}
+
+*::-webkit-scrollbar {
+  width: 5px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgba(155, 155, 155, 0.5);
+  border-radius: 20px;
+  border: transparent;
+}
