@@ -5,7 +5,6 @@ export default function ListItem({
     setCurrentDashboard,
     id,
 }) {
-
     const dashboardSelectHandler = () => {
         setCurrentDashboard(dashboard)
         const newDashboard = dashboards.map((dashboard) => {
@@ -21,11 +20,8 @@ export default function ListItem({
                 }
             }
         })
-
         setDashboard(newDashboard)
-
     }
-
     return (
         <div 
             className={`list-item ${dashboard.active ? "selected" : ""}`}
@@ -34,7 +30,6 @@ export default function ListItem({
                 <img src={dashboard.image} alt={dashboard.name}></img>
                 <div className="dashboard-desctiption">
                     <h3>{dashboard.name}</h3>
-                    <h4>{dashboard.author}</h4>
                 </div>
             </div>
     )

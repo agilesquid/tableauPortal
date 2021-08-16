@@ -1,17 +1,21 @@
 
 import React from "react"
+import Viz from "./Viz"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faTimes } from "@fortawesome/free-solid-svg-icons"
 
 import ListItem from "./ListItem"
 
+
 export default function List({ 
         listStatus, 
         setListStatus,
+        setVizStatus,
         dashboards,
         setDashboard,
-        setCurrentDashboard,    
+        setCurrentDashboard,
+        vizStatus  = Viz.vizStatus,    
     }) {
     return (
         <div className={`list ${listStatus ? "active-list" : ""}`}>
@@ -26,10 +30,12 @@ export default function List({
 
                     onClick={() => {
                         setListStatus(!listStatus)
+                        setVizStatus(!vizStatus)
                     }}
                 />
             </div>
             <div className="list-items">
+              
         {dashboards.map((dashboard) => (
           <ListItem
             dashboard={dashboard}
@@ -40,8 +46,11 @@ export default function List({
             // that have the same props.
             key={dashboard.id}
             id={dashboard.id}
+            
+
           />
         ))}
+        
       </div>
     </div>
     )

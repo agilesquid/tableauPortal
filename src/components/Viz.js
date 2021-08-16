@@ -1,16 +1,18 @@
 import { useState, useRef, useEffect } from "react"
 
+
 const { tableau } = window
 
-export default function Viz({ currentDashboard }) {
+
+export default function Viz({ currentDashboard, vizStatus}) {
     const [viz, setViz] = useState(null)
 
     const ref = useRef(null)
     const options = {
         hideTabs: true,
         hideToolbar: true,
-        width: "1500px",
-        height: "800px",
+        width: "1600px",
+        height: "900px",
     }
 
     const initViz = () => {
@@ -25,9 +27,10 @@ export default function Viz({ currentDashboard }) {
     useEffect(initViz, [currentDashboard])
 
     return (
-        <div className="viz-container">
-            <h2>{currentDashboard.name}</h2>
-            <h3>{currentDashboard.author}</h3>
+        <div className={`viz-container ${vizStatus? "active-viz" : ""}`}>
+
+
+
             <div ref={ref}></div>
         </div>
     )

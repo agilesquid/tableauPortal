@@ -11,23 +11,29 @@ function App() {
   const [dashboards, setDashboard] = useState(data())
   const [currentDashboard, setCurrentDashboard] = useState(dashboards[0])
   const [listStatus, setListStatus] = useState(false)
+  const [vizStatus, setVizStatus] = useState(false)
 
 
   return (
     <div className="App">
       <List 
         listStatus={listStatus} 
-        setListStatus={setListStatus} 
+        setListStatus={setListStatus}
+        vizStatus={vizStatus} 
+        setVizStatus={setVizStatus}
         dashboards={dashboards}
         setDashboard={setDashboard}
         setCurrentDashboard={setCurrentDashboard}
       />
-      <Viz currentDashboard = {currentDashboard} />
+      <div className = {`viz-container ${vizStatus? "active-viz" : ""}`}>
+      <Viz currentDashboard = {currentDashboard}/>
       <FontAwesomeIcon className="bars" icon = {faBars} 
       onClick={() => {
         setListStatus(!listStatus)
+        setVizStatus(!vizStatus)
       }}
       />
+      </div>
     </div>
   );
 }
